@@ -3,11 +3,11 @@ import { AddCategory } from "./Components/AddCategory";
 import {GifGrid} from "./Components/GifGrid";
 
 export const GifExpertApp = () => {
-const [categories , setCategories] = useState (["Messi World Cup"]);
+const [categories , setCategories] = useState ([]);
 
 const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory))return;
-    setCategories([...categories,newCategory]);
+    setCategories([newCategory, ...categories]);
     console.log(categories)
 }
 
